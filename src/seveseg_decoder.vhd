@@ -4,7 +4,7 @@
 -- 
 -- Create Date: 02/24/2025 08:17:14 AM
 -- Design Name: 
--- Module Name: seveseg_decoder - Behavioral
+-- Module Name: sevenseg_decoder - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,12 +31,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity seveseg_decoder is
-    Port ( i_Hex : in STD_LOGIC_VECTOR (3 downto 0);
-           o_seg_n : out STD_LOGIC_VECTOR (6 downto 0));
-end seveseg_decoder;
+entity sevenseg_decoder is
+    Port ( 
+    i_Hex    : in STD_LOGIC_VECTOR (3 downto 0);
+    o_seg_n  : out STD_LOGIC_VECTOR (6 downto 0)
+    );
+end sevenseg_decoder;
 
-architecture Behavioral of seveseg_decoder is
+architecture Behavioral of sevenseg_decoder is
 
 begin 
  with i_Hex select
